@@ -1,4 +1,4 @@
-#Clone working branch:
+# Clone working branch:
 
 ```
 git clone -b dk-open-sauce-2026 https://github.com/eewiki/sl2610-examples.git ;\
