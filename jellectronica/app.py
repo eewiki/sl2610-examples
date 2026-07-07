@@ -188,7 +188,7 @@ class UIOverlay:
         cv2.line(self.static_layer, (0, 60), (self.w, 60), (100, 100, 120, 100), 1)
         
         # Centered main title
-        title = 'Generative Audio "Jellectronica"'
+        title = 'Generative Audio'
         (tw, th), _ = cv2.getTextSize(title, cv2.FONT_HERSHEY_SIMPLEX, 0.55, 2)
         cv2.putText(self.static_layer, title, (self.w // 2 - tw // 2, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.55, (220, 220, 240, 255), 2, cv2.LINE_AA)
         
@@ -207,7 +207,7 @@ class UIOverlay:
         cv2.line(self.static_layer, (mid_x - 50, bot_start + 20), (mid_x + 50, bot_start + 20), (100, 255, 150, 150), 1)
         
         # Centered label
-        label = "JELLYFISH TRACKED"
+        label = "OBJECTS TRACKED"
         (lw, lh), _ = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.45, 1)
         cv2.putText(self.static_layer, label, (mid_x - lw // 2, bot_start + 50), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (150, 150, 150, 255), 1, cv2.LINE_AA)
         
