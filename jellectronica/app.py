@@ -576,8 +576,6 @@ def main():
         "v4l2src", "device=/dev/video0", "!",
         "video/x-raw,width=1280,height=720", "!",
         "videoconvert", "!",
-        "videoflip", "method=rotate-180", "!",
-        "videoconvert", "!",
         "videoscale", "!", f"video/x-raw,width={video_w},height={video_h},format=BGRA", "!",
         "tee", "name=t",
         
