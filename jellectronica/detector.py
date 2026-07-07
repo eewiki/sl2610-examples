@@ -12,7 +12,7 @@ import cv2
 
 # ── Configuration ──────────────────────────────────────────────
 INPUT_SIZE = 320            # Must match compiled model input size
-CONF_THRESHOLD = 0.4
+CONF_THRESHOLD = 0.5
 IOU_THRESHOLD = 0.45
 MAX_DETECTIONS = 15
 
