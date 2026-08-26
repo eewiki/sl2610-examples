@@ -515,9 +515,9 @@ def main():
     source = args.video if args.video else DEFAULT_LOCAL_VIDEO
     print(f"[Source] Local video: {source}")
 
-    if not os.path.exists(source):
-        print(f"ERROR: {source} not found")
-        sys.exit(1)
+#    if not os.path.exists(source):
+#        print(f"ERROR: {source} not found")
+#        sys.exit(1)
 
     #  Load detector 
     print("[1/3] Loading detector...")
@@ -573,7 +573,8 @@ def main():
     #  Launch GStreamer display 
     gst_cmd = [
         "gst-launch-1.0", "-q", "-e",
-        *src_elements,
+        "v4l2src", "device=/dev/video0", "!",
+        "video/x-raw,width=1280,height=720", "!",
         "videoconvert", "!",
         "videoscale", "!", f"video/x-raw,width={video_w},height={video_h},format=BGRA", "!",
         "tee", "name=t",
